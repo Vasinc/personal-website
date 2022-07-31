@@ -1,0 +1,56 @@
+// variables
+$yellow: #ffd662
+$blue: #00539c
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap')
+
+// basic resets
+*, *::after, *::before
+    box-sizing: inherit
+    margin: 0
+    padding: 0
+
+body
+    box-sizing: border-box
+    font-size: 100%
+    font-family: 'Poppins', sans-serif;
+
+footer
+    background: $blue
+    padding: 2rem 0
+    p
+        text-align: center
+        font-size: 1.25rem
+        a
+            text-decoration: none
+            font-weight: 700
+            color: $yellow
+            transition: color 200ms linear
+            &:hover
+                color: darken($yellow, 25%)
+
+header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1rem
+    background: $blue
+    #logo
+        img
+            height: 64px
+            width: auto
+    .links
+        display: flex
+        gap: 1rem
+        list-style: none
+        a
+            text-decoration: none
+            color: $yellow
+            font-size: 1.15rem
+            transition: color 200ms linear
+            &:hover
+                color: darken($yellow, 25%)
+
+main
+    height: 1000px

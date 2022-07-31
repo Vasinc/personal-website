@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer {
+  background: #00539c;
+  padding: 2rem 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+footer p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffd662;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+
+footer p a:hover {
+  color: #e2a700;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background: #00539c;
+}
+
+header #logo img {
+  height: 64px;
+  width: auto;
+}
+
+header .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+header .links a {
+  text-decoration: none;
+  color: #ffd662;
+  font-size: 1.15rem;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+
+header .links a:hover {
+  color: #e2a700;
+}
+
+main {
+  height: 1000px;
+}
+/*# sourceMappingURL=common.css.map */
