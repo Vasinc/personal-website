@@ -15,13 +15,21 @@ body
     box-sizing: border-box
     font-size: 100%
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden
+
+// classes
+.display-block
+    display: block !important
+
+.right-zero
+    right: 0 !important
 
 footer
     background: $blue
     padding: 2rem 0
     p
         text-align: center
-        font-size: 1.25rem
+        font-size: 1.15rem
         a
             text-decoration: none
             font-weight: 700
@@ -40,17 +48,83 @@ header
         img
             height: 64px
             width: auto
-    .links
+    .burger-menu
         display: flex
-        gap: 1rem
+        flex-direction: column
+        gap: .4rem
+        width: 1.75rem
+        .burger-line
+            width: 100%
+            height: 2px
+            background: darken($yellow, 25%)
+    .links
+        position: absolute
+        right: -100%
+        top: 0
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        padding: 3rem 4.5rem
+        background: white
+        height: 100vh
         list-style: none
-        a
-            text-decoration: none
-            color: $yellow
-            font-size: 1.15rem
-            transition: color 200ms linear
-            &:hover
+        z-index: 1000
+        transition: right 250ms ease-out
+        li
+            a
                 color: darken($yellow, 25%)
+                font-weight: 700
+                font-size: 1.15rem
+                text-decoration: none
+
+.backdrop
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, .5)
+    z-index: 999
 
 main
     height: 1000px
+    .main-header
+        background: $blue
+        padding: 2rem 1rem
+        color: white
+        font-size: 1.5rem
+        p:nth-of-type(2)
+            margin-left: 2rem
+            &::after
+                content: '.'
+                height: 100%
+                background: white
+                animation: blinking infinite 1.2s  .8s
+
+@media screen and ( min-width: 800px )
+    body
+        header
+                .burger-menu
+                    display: none
+                .links
+                    position: initial
+                    flex-direction: row
+                    height: initial
+                    background: none
+                    padding: 0
+                    li
+                        a
+                            color: $yellow
+                            transition: color 200ms linear
+                            &:hover
+                                color: darken($yellow, 25%)
+                                text-decoration: underline
+
+@keyframes blinking
+    // 0%
+    //     opacity: 1
+    // 100%
+    //     opacity: 0
+    50%
+        opacity: 0

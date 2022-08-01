@@ -11,6 +11,15 @@ body {
           box-sizing: border-box;
   font-size: 100%;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.right-zero {
+  right: 0 !important;
 }
 
 footer {
@@ -20,7 +29,7 @@ footer {
 
 footer p {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 footer p a {
@@ -54,27 +63,120 @@ header #logo img {
   width: auto;
 }
 
-header .links {
+header .burger-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .4rem;
+  width: 1.75rem;
+}
+
+header .burger-menu .burger-line {
+  width: 100%;
+  height: 2px;
+  background: #e2a700;
+}
+
+header .links {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 4.5rem;
+  background: white;
+  height: 100vh;
   list-style: none;
+  z-index: 1000;
+  -webkit-transition: right 250ms ease-out;
+  transition: right 250ms ease-out;
 }
 
-header .links a {
-  text-decoration: none;
-  color: #ffd662;
-  font-size: 1.15rem;
-  -webkit-transition: color 200ms linear;
-  transition: color 200ms linear;
-}
-
-header .links a:hover {
+header .links li a {
   color: #e2a700;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 main {
   height: 1000px;
+}
+
+main .main-header {
+  background: #00539c;
+  padding: 2rem 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+main .main-header p:nth-of-type(2) {
+  margin-left: 2rem;
+}
+
+main .main-header p:nth-of-type(2)::after {
+  content: '.';
+  height: 100%;
+  background: white;
+  -webkit-animation: blinking infinite 1.2s  .8s;
+          animation: blinking infinite 1.2s  .8s;
+}
+
+@media screen and (min-width: 800px) {
+  body header .burger-menu {
+    display: none;
+  }
+  body header .links {
+    position: initial;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: initial;
+    background: none;
+    padding: 0;
+  }
+  body header .links li a {
+    color: #ffd662;
+    -webkit-transition: color 200ms linear;
+    transition: color 200ms linear;
+  }
+  body header .links li a:hover {
+    color: #e2a700;
+    text-decoration: underline;
+  }
+}
+
+@-webkit-keyframes blinking {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=common.css.map */
