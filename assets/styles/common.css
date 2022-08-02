@@ -142,7 +142,7 @@ main .main-header p:nth-of-type(2) {
 }
 
 main .main-header p:nth-of-type(2)::after {
-  content: '.';
+  content: '|';
   height: 100%;
   background: white;
   -webkit-animation: blinking infinite 1.2s  .8s;

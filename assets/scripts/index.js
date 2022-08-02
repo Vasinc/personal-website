@@ -3,6 +3,8 @@ const links = document.querySelector('.links');
 const backdrop = document.querySelector('.backdrop');
 const header = document.querySelector('header');
 
+// idk
+
 function removeClassesHandler() {
     links.classList.remove('right-zero');
     backdrop.classList.remove('display-block');
