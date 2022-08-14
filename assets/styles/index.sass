@@ -12,6 +12,9 @@ $blue: #00539c
     font-size: 1.1rem
     text-decoration: none
     border-radius: 1rem
+    transition: background 200ms linear
+    &:hover
+        background: darken($yellow, 15%)
 
 .main-header
     background: $blue
@@ -95,9 +98,12 @@ $blue: #00539c
                 padding: 1rem 0
                 background: $blue
                 font-weight: 700
-                transform: translateY(-7px)
+                transform: translateY(-10px)
                 border-bottom-left-radius: .5rem
                 border-bottom-right-radius: .5rem
+                transition: background 200ms linear
+                &:hover
+                    background: darken($blue, 8%)
 
 @media ( max-width: 300px )
     html

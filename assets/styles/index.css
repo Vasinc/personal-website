@@ -10,6 +10,12 @@
   font-size: 1.1rem;
   text-decoration: none;
   border-radius: 1rem;
+  -webkit-transition: background 200ms linear;
+  transition: background 200ms linear;
+}
+
+.cta-btn:hover {
+  background: #ffc216;
 }
 
 .main-header {
@@ -165,10 +171,16 @@
   padding: 1rem 0;
   background: #00539c;
   font-weight: 700;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
+  -webkit-transition: background 200ms linear;
+  transition: background 200ms linear;
+}
+
+.projects-showcase .projects .project a:hover {
+  background: #003d73;
 }
 
 @media (max-width: 300px) {
