@@ -126,29 +126,6 @@ header .links li a {
   z-index: 999;
 }
 
-main {
-  height: 1000px;
-}
-
-main .main-header {
-  background: #00539c;
-  padding: 2rem 1rem;
-  color: white;
-  font-size: 1.5rem;
-}
-
-main .main-header p:nth-of-type(2) {
-  margin-left: 2rem;
-}
-
-main .main-header p:nth-of-type(2)::after {
-  content: '|';
-  height: 100%;
-  background: white;
-  -webkit-animation: blinking infinite 1.2s  .8s;
-          animation: blinking infinite 1.2s  .8s;
-}
-
 @media screen and (min-width: 800px) {
   body header .burger-menu {
     display: none;
@@ -171,18 +148,6 @@ main .main-header p:nth-of-type(2)::after {
   body header .links li a:hover {
     color: #e2a700;
     text-decoration: underline;
-  }
-}
-
-@-webkit-keyframes blinking {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes blinking {
-  50% {
-    opacity: 0;
   }
 }
 /*# sourceMappingURL=common.css.map */

@@ -92,20 +92,6 @@ header
     background: rgba(0, 0, 0, .5)
     z-index: 999
 
-main
-    height: 1000px
-    .main-header
-        background: $blue
-        padding: 2rem 1rem
-        color: white
-        font-size: 1.5rem
-        p:nth-of-type(2)
-            margin-left: 2rem
-            &::after
-                content: '|'
-                height: 100%
-                background: white
-                animation: blinking infinite 1.2s  .8s
 
 @media screen and ( min-width: 800px )
     body
@@ -126,12 +112,3 @@ main
                                 color: darken($yellow, 25%)
                                 text-decoration: underline
 
-@keyframes blinking
-    // 0%
-    //     opacity: 1
-    // 100%
-    //     opacity: 0
-    50%
-        opacity: 0
-
-// idk
