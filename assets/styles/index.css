@@ -30,16 +30,18 @@
   font-size: 1.5rem;
 }
 
-.main-header p:nth-of-type(2) {
+.main-header input {
+  position: relative;
   margin-left: 2rem;
+  width: 90%;
+  background: #00539c;
+  color: white;
+  font-size: 2rem;
+  border: none;
 }
 
-.main-header p:nth-of-type(2)::after {
-  content: '|';
-  height: 100%;
-  background: white;
-  -webkit-animation: blinking infinite 1.2s  .8s;
-          animation: blinking infinite 1.2s  .8s;
+.main-header input:focus {
+  outline: none;
 }
 
 .main-about {
@@ -366,16 +368,16 @@
             transform: rotate(0);
   }
   55% {
-    -webkit-transform: translateY(6rem);
-            transform: translateY(6rem);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
   80% {
     opacity: 0;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(6rem);
-            transform: translateY(6rem);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
 }
 
@@ -417,16 +419,16 @@
             transform: rotate(0);
   }
   55% {
-    -webkit-transform: translateY(6rem);
-            transform: translateY(6rem);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
   80% {
     opacity: 0;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(6rem);
-            transform: translateY(6rem);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -6,10 +6,15 @@ const deformablePhoto = document.getElementById('deformable-picture');
 const deformText = document.getElementById('text-after-deform');
 const letters = document.getElementsByClassName('letter');
 const h1 = document.querySelector('h1');
+const input = document.getElementById('header-input');
 
 let borderRadiusData = [0, 0 ,0 ,0];
 let clicksLeft = 5;
 let clickable = true;
+
+window.onload = () => {
+    input.value = 'Hello world!'
+}
 
 function deformPhotoHandler(event) {
     if (!clickable) return;
