@@ -4,6 +4,8 @@ const backdrop = document.querySelector('.backdrop');
 const header = document.querySelector('header');
 const deformablePhoto = document.getElementById('deformable-picture');
 const deformText = document.getElementById('text-after-deform');
+const letters = document.getElementsByClassName('letter');
+const h1 = document.querySelector('h1');
 
 let borderRadiusData = [0, 0 ,0 ,0];
 let clicksLeft = 5;
@@ -48,6 +50,18 @@ function removeClassesHandler() {
     header.classList.remove('overflow-visible');
     document.body.style.overflow = 'visible';
 }
+
+h1.addEventListener('click', event => {
+    if(event.target.className !== 'letter') return;
+    event.target.classList.add('fall-class');
+    setInterval( () => {
+        event.target.style.opacity = 0;
+    },
+    1000
+    )
+})
+
+console.log(letters)
 
 burgerMenu.addEventListener('click', () => {
     header.classList.add('overflow-visible');
