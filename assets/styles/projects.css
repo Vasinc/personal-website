@@ -1,0 +1,11 @@
+header .links li:nth-of-type(2) {
+  color: #e2a700;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+  body header .links li:nth-of-type(2) a {
+    color: #e2a700;
+  }
+}
+/*# sourceMappingURL=projects.css.map */

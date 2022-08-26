@@ -1,0 +1,11 @@
+header .links li:nth-of-type(3) {
+  color: #e2a700;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+  body header .links li:nth-of-type(3) a {
+    color: #e2a700;
+  }
+}
+/*# sourceMappingURL=contactme.css.map */
