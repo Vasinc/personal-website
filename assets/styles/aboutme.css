@@ -3,6 +3,10 @@ header .links li:nth-of-type(1) {
   text-decoration: underline;
 }
 
+main {
+  height: 1000px;
+}
+
 @media screen and (min-width: 800px) {
   body header .links li:nth-of-type(1) a {
     color: #e2a700;
