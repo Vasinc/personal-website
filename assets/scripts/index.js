@@ -1,7 +1,11 @@
-const burgerMenu = document.querySelector('.burger-menu');
-const links = document.querySelector('.links');
-const backdrop = document.querySelector('.backdrop');
-const header = document.querySelector('header');
+// ->>
+
+// const burgerMenu = document.querySelector('.burger-menu');
+// const links = document.querySelector('.links');
+// const backdrop = document.querySelector('.backdrop');
+// const header = document.querySelector('header');
+
+// <<-
 const deformablePhoto = document.getElementById('deformable-picture');
 const deformText = document.getElementById('text-after-deform');
 const letters = document.getElementsByClassName('letter');
@@ -49,39 +53,48 @@ function deformPhotoHandler(event) {
     console.log(borderRadiusData);
 }
 
-function removeClassesHandler() {
-    links.classList.remove('right-zero');
-    backdrop.classList.remove('display-block');
-    header.classList.remove('overflow-visible');
-    document.body.style.overflow = 'visible';
-}
+// ->>
+
+// function removeClassesHandler() {
+//     links.classList.remove('right-zero');
+//     backdrop.classList.remove('display-block');
+//     header.classList.remove('overflow-visible');
+//     document.body.style.overflow = 'visible';
+// }
+
+// <<-
 
 h1.addEventListener('click', event => {
     if(event.target.className !== 'letter') return;
     event.target.classList.add('fall-class');
-    setInterval( () => {
+    setTimeout( () => {
         event.target.style.opacity = 0;
     },
     1000
     )
+    event.target.style.cursor = "default";
 })
 
 console.log(letters)
 
-burgerMenu.addEventListener('click', () => {
-    header.classList.add('overflow-visible');
-    links.classList.add('right-zero');
-    backdrop.classList.add('display-block');
-    document.body.style.overflow = 'hidden';
-    header.scrollIntoView();
-})
 
-backdrop.addEventListener('click', removeClassesHandler);
+// ->>
+// burgerMenu.addEventListener('click', () => {
+//     header.classList.add('overflow-visible');
+//     links.classList.add('right-zero');
+//     backdrop.classList.add('display-block');
+//     document.body.style.overflow = 'hidden';
+//     header.scrollIntoView();
+// })
 
-window.addEventListener('resize', () => {
-    if(window.innerWidth >= 800 ) {
-        removeClassesHandler();
-    }
-})
+// backdrop.addEventListener('click', removeClassesHandler);
+
+// window.addEventListener('resize', () => {
+//     if(window.innerWidth >= 800 ) {
+//         removeClassesHandler();
+//     }
+// })
+
+// <<-
 
 deformablePhoto.addEventListener('click', deformPhotoHandler);

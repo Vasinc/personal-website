@@ -80,6 +80,7 @@ header .burger-menu {
           flex-direction: column;
   gap: .4rem;
   width: 1.75rem;
+  cursor: pointer;
 }
 
 header .burger-menu .burger-line {
