@@ -12,12 +12,177 @@ header .links li:nth-of-type(1) {
 }
 
 main {
-  height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+}
+
+.main-header p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-header h1 {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.dynamic-text {
+  font-size: 1.75rem;
+  color: #c89400;
+}
+
+.main-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.technologies {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.technologies ul {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.technologies ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.technologies ul li img {
+  width: 3rem;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+.technologies ul li::after {
+  content: ',';
+}
+
+.technologies ul li:nth-of-type(4) img {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  margin-left: 2rem;
+}
+
+.technologies ul li:last-of-type::after {
+  content: '';
+}
+
+.me {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.me ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .25rem;
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.me ul li .true {
+  color: green;
+}
+
+.me ul li .false {
+  color: red;
+}
+
+.me ul li a {
+  text-decoration: none;
+}
+
+.me ul li a:hover {
+  text-decoration: underline;
+}
+
+.me ul li .instagram {
+  color: #ff4162;
+}
+
+.me ul li .tiktok {
+  color: black;
+}
+
+.about-me_text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.about-me_text h2 {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  max-width: 550px;
 }
 
 @media screen and (min-width: 800px) {
   body header .links li:nth-of-type(1) a {
     color: #e2a700;
+  }
+  body main {
+    margin: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body main {
+    margin: 2rem 4rem;
+  }
+  body main .main-header p {
+    font-size: 2rem;
+  }
+  body main .main-header h1 {
+    font-size: 2rem;
+  }
+  body main .main-body .technologies {
+    font-size: 2rem;
+  }
+  body main .main-body .me {
+    font-size: 2rem;
+  }
+  body main .main-body .about-me_text {
+    font-size: 2rem;
+  }
+  body main .main-body .about-me_text h2 {
+    font-size: 2rem;
+    max-width: 800px;
   }
 }
 /*# sourceMappingURL=aboutme.css.map */
