@@ -16,8 +16,55 @@ header
             color: darken($yellow, 25%)
             text-decoration: underline
 
-main
-    height: 1000px
+.projects
+    display: flex
+    flex-direction: column
+    margin: 2rem auto
+    gap: 2rem
+    .projects-row
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        .project
+            position: relative
+            display: flex
+            flex-direction: column
+            margin: auto
+            width: 90%
+            max-width: 300px
+            border-radius: .75rem
+            img 
+                width: 100%
+                height: auto
+                border-top-left-radius: .75rem
+                border-top-right-radius: .75rem
+            a
+                width: 100%
+                text-align: center
+                text-decoration: none
+                padding: .5rem 0
+                background: $yellow
+                color: black
+                font-size: 1.15rem
+                font-weight: 700
+                border-bottom-left-radius: .75rem
+                border-bottom-right-radius: .75rem
+        .big-project
+            a
+                background: $blue
+                color: white
+            &::after
+                content: '!'
+                text-align: center
+                position: absolute
+                right: -1rem
+                top: -1rem
+                font-size: 2rem
+                font-weight: 700
+                background: $yellow
+                border-radius: 50%
+                padding: 0 1.25rem
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, .6)
 
 @media screen and ( min-width: 800px )
     body
@@ -26,3 +73,16 @@ main
                     li:nth-of-type(2)
                         a
                             color: darken($yellow, 25%)
+        main
+            .projects
+                .projects-row
+                    flex-direction: row
+                    flex-wrap: wrap
+
+@media screen and ( min-width: 1300px  )
+    body
+        main
+            .projects
+                .projects-row
+                    margin: 0 1.25rem
+            
