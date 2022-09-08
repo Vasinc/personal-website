@@ -12,7 +12,104 @@ header .links li:nth-of-type(3) {
 }
 
 main {
-  height: 1000px;
+  padding: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .inputs .personal-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input {
+  padding: .25rem;
+  margin: .5rem 0;
+  border: 1.5px solid #00539c;
+  border-radius: .25rem;
+  width: 200px;
+}
+
+form input:focus {
+  outline: 2px solid #00539c;
+}
+
+form textarea {
+  padding: .1rem;
+  border: 1.5px solid #00539c;
+  border-radius: .25rem;
+}
+
+form textarea:focus {
+  outline: 2px solid #00539c;
+}
+
+form button {
+  padding: .75rem 1.5rem;
+  background: #ffd662;
+  font-weight: 700;
+  border-radius: .25rem;
+  width: 100px;
+  margin: auto;
+  border: none;
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ff0e38;
+}
+
+@media screen and (min-width: 700px) {
+  body main {
+    padding: 4rem 2rem;
+  }
+  body main form .inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+    gap: 5rem;
+  }
 }
 
 @media screen and (min-width: 800px) {

@@ -17,7 +17,63 @@ header
             text-decoration: underline
 
 main
-    height: 1000px
+    padding: 2rem 
+
+form
+    display: flex
+    flex-direction: column
+    text-align: center
+    .inputs
+        display: flex
+        flex-direction: column
+        align-items: center
+        .personal-data
+            display: flex
+            flex-direction: column
+            align-items: center
+    input
+        padding: .25rem
+        margin: .5rem 0
+        border: 1.5px solid $blue
+        border-radius: .25rem
+        width: 200px
+        &:focus
+            outline: 2px solid $blue
+    textarea
+        padding: .1rem
+        border: 1.5px solid $blue
+        border-radius: .25rem
+        &:focus
+            outline: 2px solid $blue
+    button
+        padding: .75rem 1.5rem
+        background: $yellow
+        font-weight: 700
+        border-radius: .25rem
+        width: 100px
+        margin: auto
+        border: none
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .4)
+
+
+p
+    text-align: center
+    margin: 1rem 0
+    font-size: 1.25rem
+    a
+        text-decoration: none
+        font-weight: 700
+        color: darken(pink, 35%)
+
+@media screen and ( min-width: 700px )
+    body
+        main
+            padding: 4rem 2rem
+            form
+                .inputs
+                    flex-direction: row
+                    margin: auto
+                    gap: 5rem
 
 @media screen and ( min-width: 800px )
     body
